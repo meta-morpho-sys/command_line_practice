@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Commandos mockup</title>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <script>
+      $( document ).ready(function() {
+          console.log( "document loaded" );
+          $( "#CLI" ).keyup(function(event) {
+            console.log( "Handler for .keypress() called." + event );
+            console.log(event.target.value);
+          $('#hint').text( $('#CLI').val() );
+          });
+      });
+    </script>
+
+    <input type="text" id="CLI" size="60">
+
+    <div id="hint"></div>
+  </body>
+</html>
