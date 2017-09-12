@@ -7,7 +7,7 @@ function Hinter(input_id, output_id){
 
 Hinter.prototype.lookup = function(command_string){
     if (command_string == 'ls') {
-        return 'ls';
+        return 'Consider ls -al';
     } else {
         return '';
     }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Commandos mockup</title>
-    <script src="js/new.js"></script>
+    <script src="js/hinter.js"></script>
   </head>
 
   <body>
@@ -13,11 +13,16 @@
 
     <script>
       $( document ).ready(function() {
-          console.log( "document loaded" );
+
           $( "#CLI" ).keyup(function(event) {
-            console.log( "Handler for .keypress() called." + event );
-            console.log(event.target.value);
-          $('#hint').text( $('#CLI').val() );
+
+              var hinter = new Hinter();
+
+              var command_string = $('#CLI').val();
+
+              var hint = hinter.lookup(command_string);
+
+              $('#hint').text(hint);
           });
       });
     </script>
