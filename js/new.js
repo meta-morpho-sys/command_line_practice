@@ -6,7 +6,7 @@ function Hinter(input_id, output_id){
 }
 
 Hinter.prototype.lookup = function(command_string){
-    if (command_string.equals('ls')) {
+    if (command_string == 'ls') {
         return 'ls';
     } else {
         return '';
